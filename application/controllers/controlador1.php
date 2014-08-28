@@ -5,6 +5,7 @@ class controlador1 extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->helper('mihelper');
 
 	}
 
@@ -17,9 +18,6 @@ class controlador1 extends CI_Controller {
 
 		$this->load->view('prueba1/bienvenido');
 	}
-
-
-
 
 }
 
