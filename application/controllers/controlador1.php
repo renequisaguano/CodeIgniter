@@ -10,8 +10,10 @@ class controlador1 extends CI_Controller {
 	}
 
 	function index(){
+		$this->load->library('menu',array('Inicio','Contacto','Curso'));
+		$data['miMenu']=$this->menu->construirMenu();
 		$this->load->view('prueba1/header');
-		$this->load->view('prueba1/bienvenido');
+		$this->load->view('prueba1/bienvenido',$data);
 	}
 
 	function holaMundo(){
