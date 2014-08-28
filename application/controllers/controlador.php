@@ -1,11 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class controlador1 extends CI_Controller {
+class controlador extends CI_Controller {
 
 	function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('mihelper');
+		$this->load->helper('form');
+		$this->load->model('prueba1_model');
 
 	}
 
@@ -19,6 +21,25 @@ class controlador1 extends CI_Controller {
 	function holaMundo(){
 
 		$this->load->view('prueba1/bienvenido');
+	}
+
+	
+	function nuevo(){
+		$this->load->view('prueba1/header');
+		$this->load->view('prueba1/formulario');
+	}
+
+	function recibirDatos(){
+		$data= array(
+
+			'nombre'=>$this->input->post('nombre'),
+			'videos'=>$this->input->post('videos')
+			);
+		$this->prueba1_model->crearCurso($data);
+		header('Location:controlador/nuevo');
+
+
+
 	}
 
 }

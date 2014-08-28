@@ -3,6 +3,6 @@
 <?= $miMenu ?>
 <h1>Llamado desde el controlador codigo facilito</h1>
 
-<?= getNombre()?>
+<?php echo getNombre(); ?>
 </body>
 </html>
