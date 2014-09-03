@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$dato['hola']='Hola Mundo aa';
+		$dato['header']=$this->load->view('/prueba1/header','',TRUE);
 		$this->load->view('welcome_message',$dato);
 	}
 }
