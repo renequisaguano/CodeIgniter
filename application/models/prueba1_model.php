@@ -33,6 +33,7 @@ class Prueba1_model extends CI_Model{
 			);
 		$this->db->where('idCurso',$id);
 		$query=$this->db->update('cursos',$datos);
+		
 	}
 
 
