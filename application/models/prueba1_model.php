@@ -25,6 +25,26 @@ class Prueba1_model extends CI_Model{
 		else return false;
 	}
 
+	function actualizarCurso($id,$data){
+		$datos=array(
+			'nombreCurso'=>$data['nombre'],
+			'videosCurso'=>$data['videos']
+
+			);
+		$this->db->where('idCurso',$id);
+		$query=$this->db->update('cursos',$datos);
+	}
+
+
+	function eliminarCurso($id){
+		$query="delete from cursos where idCurso=$id";
+		$this->db->query($query);
+
+		//$this->db->delete('cursos',array('idCurso'=>$id));
+
+
+	}
+
 
 }
 

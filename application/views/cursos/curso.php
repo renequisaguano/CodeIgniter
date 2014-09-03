@@ -19,7 +19,7 @@ if($cursos){
 
 <tr>
 
-	<td><center> <a href="index/<?= $c->idCurso ?>"> <?php echo $c->nombreCurso ?>  </a> </center> </td>
+	<td><center> <a href="cursos/index/<?= $c->idCurso ?>"> <?php echo $c->nombreCurso ?>  </a> </center> </td>
 	<td><center> <?php echo $c->videosCurso ?></center> </td>
 
 
