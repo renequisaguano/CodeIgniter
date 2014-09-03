@@ -1,5 +1,5 @@
 <?php
-echo form_open('/controlador/recibirdatos');
+echo form_open('/cursos/recibirdatos');
 
 $nombre=array(
 	'name'=> 'nombre',

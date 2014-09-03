@@ -23,24 +23,7 @@ class controlador extends CI_Controller {
 		$this->load->view('prueba1/bienvenido');
 	}
 
-	
-	function nuevo(){
-		$this->load->view('prueba1/header');
-		$this->load->view('prueba1/formulario');
-	}
 
-	function recibirDatos(){
-		$data= array(
-
-			'nombre'=>$this->input->post('nombre'),
-			'videos'=>$this->input->post('videos')
-			);
-		$this->prueba1_model->crearCurso($data);
-		header('Location:controlador/nuevo');
-
-
-
-	}
 
 }
 
