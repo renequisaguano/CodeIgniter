@@ -17,6 +17,14 @@ class Prueba1_model extends CI_Model{
 		else return false;
 	}
 
+	function obtenerCurso($id){
+		//where
+		$this->db->where('idCurso',$id);
+		$query=$this->db->get('cursos');
+		if($query->num_rows()>0) return $query;
+		else return false;
+	}
+
 
 }
 
